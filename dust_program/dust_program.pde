@@ -7,7 +7,7 @@ int draw = 3;
 
 void setup(){
   size(500,500);
-  frameRate(30);
+  frameRate(50);
   
   gra = new int[width*width+height];
   readGra = new int[width*width+height];
@@ -29,12 +29,12 @@ void setup(){
   colors[1] = color(255,0,0);
   colors[2] = color(150,255,0);
   properties[2][0]=1;
-  properties[2][1]=10;
+  properties[2][1]=97;
   colors[3] = color(0,0,255);
   properties[3][0]=1;
-  properties[3][1]=90;
+  properties[3][1]=85;
   properties[3][2]=1;
-  properties[3][3]=90;
+  properties[3][3]=70;
   
 }
   

@@ -41,7 +41,7 @@ boolean jump(int a, int b, int h, int v){
   gra(a+h,b+v,tempGras);
   return true;
 }
-
+/*
 int moveDown(int a, int b){
   if(newGra(a,b+1)==0){
     return 1;
@@ -58,6 +58,31 @@ int moveDown(int a, int b, int c){
   }
 }
 
+
+*/
+
+void realMove(int a, int b, int c, int d){
+  if(newGra(c,d) == 0){
+    jump(a, b, c-a, d-b);
+  } else {
+    
+    if(choose(properties[newGra(c,d)][3],properties[gra(a,b)][3])){
+      jump(a, b, 0, 0);
+    } else {
+      jump(c, d, -1, 0);
+      jump(a, b, c-a, d-b);
+    }
+    
+  }
+}
+
+boolean choose(int a, int b){
+  if(random(100)<a*100/(a+b)){
+    return true;
+  }
+  return false;
+}
+/*
 int moveSide(int a, int b){
   if(newGra(a+1,b)==0){
     if(newGra(a-1,b)==0){
@@ -89,3 +114,4 @@ int moveSide(int a, int b, int c){
 boolean moveStay(int a, int b){
   return jump(a,b,0,0);
 }
+*/
